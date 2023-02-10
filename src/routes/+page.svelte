@@ -7,7 +7,7 @@
 	$: easing = linear;
 	$: options = {duration, easing, times: 2};
 
-	let show = true;
+	let show = false;
 	
 	function spin(node, options) {
 		const {times = 1} = options;
@@ -24,11 +24,14 @@
 		};
 	}
 </script>
+{#if !show}
+<button on:click={()=>show= true}>Click me</button>
+{/if}
 {#if show}
 	<div class="center" transition:spin={options}>
     <div class="content">
       <div class="flex h-screen justify-center items-center gap-4">
-        <a href="/pages/intro"><img class="max-h-52" alt="Gramps" src={gramps} /></a> goes sveltekit
+        <a href="/pages/first"><img class="max-h-52" alt="Gramps" src={gramps} /></a> goes sveltekit
       </div>
     </div>
 	</div>
