@@ -13,7 +13,7 @@
 <Subtitle>Routing</Subtitle>
 <p>A filesystem-based router</p>
 <Subtitle>Loading data</Subtitle>
-{data.random}
+{data.rand}
 <Subtitle>Form actions</Subtitle>
 <form method="post"><input type="text" name="test"><button type="submit">Submit</button></form>
 Response: {form?.response}
